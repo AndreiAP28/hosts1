@@ -1,9 +1,14 @@
 #!/bin/bash
 
-HOSTS_FILE="$HOME/etc/hosts"
+if [ $# -ne 1 ]; then
+    echo "Folosire: $0 <fisier_hosts>"
+    exit 1
+fi
+
+HOSTS_FILE="$1"
 
 if [ ! -f "$HOSTS_FILE" ]; then
-    echo "Fisierul $HOSTS_FILE nu exista!"
+    echo "Eroare: fisierul '$HOSTS_FILE' nu exista."
     exit 1
 fi
 
