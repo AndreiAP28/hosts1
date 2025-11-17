@@ -19,3 +19,4 @@ while read -r ip rest; do
         echo "Invalid: $ip"
     fi
 done < "$HOSTS_FILE"
+POPescu andrei
